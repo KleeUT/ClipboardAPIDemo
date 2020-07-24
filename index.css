@@ -1,0 +1,33 @@
+* {
+  margin-bottom: 1rem;
+  font-size: 18px;
+}
+.section {
+  height: 100vh;
+  border-top: 2px solid #ff9100;
+  border-bottom: 2px solid #ff9100;
+}
+.columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  max-width: 50rem;
+  margin: auto;
+}
+
+textarea {
+  padding: 1rem;
+  height: 15rem;
+}
+
+button {
+  padding: 1rem;
+  background: #d6d6e3;
+}
+
+img.snoop {
+  height: 50vh;
+  margin: auto;
+}
