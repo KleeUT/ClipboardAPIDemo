@@ -54,12 +54,11 @@ document.getElementById("pasteButton").addEventListener("click", messWithPaste);
 
 // Inject //
 
-function addToClipboard() {
+async function addToClipboard() {
   try {
-    navigator.clipboard
-      .writeText("This text was injected into the clipboard")
-      .then(console.log)
-      .catch(console.error);
+    const result = await navigator.clipboard
+      .writeText("This text was injected into the clipboard");
+    console.log("Added to clipboard", result);
   } catch (e) {
     console.error(e);
   }
@@ -91,9 +90,8 @@ document.getElementById("copyImage").addEventListener("click", writeClipImg);
 
 // Read //
 function readClipboard() {
-  navigator.clipboard
-    .readText()
-    .then((t) => console.log("Current Clipboard", t));
+  const clipboardData = await navigator.clipboard.readText();
+  console.log("Clipboard Data", clipboardData);
 }
 document
   .getElementById("readClipboard")
